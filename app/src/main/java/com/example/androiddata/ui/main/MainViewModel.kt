@@ -8,18 +8,7 @@ import com.example.androiddata.data.MonsterRepository
 
 class MainViewModel(app: Application) : AndroidViewModel(app) {
 
-    private val dataRepo = MonsterRepository()
-
-    init {
-
-        val monsterData = dataRepo.getMonsterData(app)
-        for (monster in monsterData) {
-            Log.i(
-                LOG_TAG,
-                "${monster.monsterName} (\$${monster.price})"
-            )
-        }
-
-    }
+    private val dataRepo = MonsterRepository(app)
+    val monsterData = dataRepo.monsterData
 
 }
