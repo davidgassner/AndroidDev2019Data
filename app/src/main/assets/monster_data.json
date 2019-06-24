@@ -1,0 +1,98 @@
+[
+  {
+    "imageFile": "monster01",
+    "monsterName": "Mingle",
+    "caption": "Double Trouble",
+    "description": "Mingle excels at doing twice the work in half the time, with pinpoint accuracy.  These skills serve her well in her role as Senior Data Analyst for an international cloud computing company. She's also got a penchant for ballroom dance, line dancing, and pretty much any kind of activity that lets her groove to music.",
+    "price": 0.29,
+    "scariness": 2
+  },
+  {
+    "imageFile": "monster02",
+    "monsterName": "Yodel",
+    "caption": "Yodelay Hee Hoo!",
+    "description": "Yodel grew up in a family of singers and loud talkers and could never get a word in edgewise. Then his vast talent for yodeling emerged. Now he performs to adoring fans throughout the world, and always has the loudest voice at the dinner table. Incidentally, he's also a loud proponent of net neutrality, and spends countless hours moderating an internet forum devoted solely to that subject.",
+    "price": 0.19,
+    "scariness": 4
+  },
+  {
+    "imageFile": "monster03",
+    "monsterName": "Squido",
+    "caption": "An Eye for Design",
+    "description": "Squido's got his hands or rather tentacles, in everything. First and foremost, he's a web designer with an eye for visual aesthetics, but he's also rather keen on UX design and making sure what he creates translates optimally to the end user. In his off-hours he's an avid nature photographer and bowler.",
+    "price": 0.29,
+    "scariness": 3
+  },
+  {
+    "imageFile": "monster04",
+    "monsterName": "Spook",
+    "caption": "Safe and Sound",
+    "description": "Cracking code and battling hackers is Spook's forte. She holds a prominent position as Head of Cyber Security for the Department of Monster Defense, where she thwarts attacks on government computer systems as often as she blinks. When not at work, Spook delights in serving up a fright at haunted mansions and ghost walks.",
+    "price": 0.29,
+    "scariness": 5
+  },
+  {
+    "imageFile": "monster05",
+    "monsterName": "Melville",
+    "caption": "Networking Guru",
+    "description": "Setting up computer networks has always come easily to Melville. In his role as Senior Network Engineer for Landon Hotel, Melville builds complex blueprints for communication networks, a task that requires enormous attention to detail and patience. When not at work, Melville chooses less taxing mental activities, like hiking in the hills near his Silicon Valley home.",
+    "price": 0.19,
+    "scariness": 2
+  },
+  {
+    "imageFile": "monster06",
+    "monsterName": "Filo",
+    "caption": "Baker by Day, Techie by Night",
+    "description": "Filo was named after the wonderful, buttery pastry crust that monsters adore. She’s a prominent baker and pastry chef in monster circles and is always exploring and sharing new dessert trends. In her off time, however, she's quite the techie and dabbles in web and mobile app development. She even built a custom cake ordering app for her pastry business.",
+    "price": 0.29,
+    "scariness": 3
+  },
+  {
+    "imageFile": "monster07",
+    "monsterName": "Blade",
+    "caption": "Monster APPetite",
+    "description": "Blade freelances as a mobile app developer and has built some of the most popular Android and iOS apps used in modern monster society, including the award-winning Monster APPetite, which tracks calorie consumption and activity for the health-conscious monster. In his spare time, he competes in national agility contests with his border collie Winston.",
+    "price": 0.29,
+    "scariness": 5
+  },
+  {
+    "imageFile": "monster08",
+    "monsterName": "Timber",
+    "caption": "Database Expert",
+    "description": "A natural-born problem-solver, Timber's especially excited to solve complex business problems using databases. As a database administrator for Globe Bank International, he's able to flex his mental muscles using his certifications in Oracle, Microsoft SQL Server, and MySQL. When not behind the computer, Timber can often be found biking, surfing, or lounging around with a good detective novel.",
+    "price": 0.19,
+    "scariness": 2
+  },
+  {
+    "imageFile": "monster09",
+    "monsterName": "Skedaddle",
+    "caption": "Game of Life",
+    "description": "When Skedaddle was a teenager, his parents couldn't keep him away from his Game Boy. In fact, they seriously worried that he might not find a suitable career.  Now as a prominent game developer for Red30 Tech, he's found his true calling…and put his family's worries to rest. You probably could have guessed this, but in his spare time Skedaddle loves to pay computer games.",
+    "price": 0.29,
+    "scariness": 4
+  },
+  {
+    "imageFile": "monster10",
+    "monsterName": "Smiley",
+    "caption": "Don’t Worry, Be Happy!",
+    "description": "With the bad rap they get from movies, monsters have it pretty tough. Perhaps no monster has done more to squash stereotypes than Smiley, who can take anyone’s frown and turn it upside down. That's why Smiley has a reputation as the best computer support specialist on her IT team, three years running.",
+    "price": 0.29,
+    "scariness": 1
+  },
+  {
+    "imageFile": "monster11",
+    "monsterName": "Frex",
+    "caption": "Born Leader",
+    "description": "Frex has always had a knack for leadership, starting from his days of being a Monster Scout. After studying computer science in college, and working as an IT specialist at several large companies, he naturally followed the  management path.  Now, as an IT manager for a Fortune 500 company, he gets to put his technical know-how to work, while also leading a team of talented engineers. Frex's hobbies include golf, billiards, and community service.",
+    "price": 0.19,
+    "scariness": 3
+  },
+  {
+    "imageFile": "monster12",
+    "monsterName": "Drift",
+    "caption": "In the Clouds",
+    "description": "After years of everyone saying her head was in the clouds, Drift found her calling as a software engineer developing a well-known cloud solution for the computing giant, Red30 Tech. After work, she prefers to unwind by catching wind in her sail and paragliding high in the sky.",
+    "price": 0.29,
+    "scariness": 4
+  }
+]
