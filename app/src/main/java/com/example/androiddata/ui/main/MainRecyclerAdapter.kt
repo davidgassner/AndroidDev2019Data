@@ -13,7 +13,8 @@ import com.example.androiddata.R
 import com.example.androiddata.data.Monster
 
 class MainRecyclerAdapter(val context: Context,
-                          val monsters: List<Monster>):
+                          val monsters: List<Monster>,
+                          val itemListener: MonsterItemListener):
     RecyclerView.Adapter<MainRecyclerAdapter.ViewHolder>()
 
 {
@@ -36,6 +37,9 @@ class MainRecyclerAdapter(val context: Context,
             Glide.with(context)
                 .load(monster.thumbnailUrl)
                 .into(monsterImage)
+            holder.itemView.setOnClickListener{
+                itemListener.onMonsterItemClick(monster)
+            }
         }
     }
 
@@ -44,5 +48,9 @@ class MainRecyclerAdapter(val context: Context,
         val nameText = itemView.findViewById<TextView>(R.id.nameText)
         val monsterImage = itemView.findViewById<ImageView>(R.id.monsterImage)
         val ratingBar = itemView.findViewById<RatingBar>(R.id.ratingBar)
+    }
+
+    interface MonsterItemListener {
+        fun onMonsterItemClick(monster: Monster)
     }
 }
