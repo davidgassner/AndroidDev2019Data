@@ -15,21 +15,11 @@ class MonsterRepository(val app: Application) {
 
     val monsterData = MutableLiveData<List<Monster>>()
 
-    private val listType = Types.newParameterizedType(
-        List::class.java, Monster::class.java
-    )
-
     init {
         getMonsterData()
-        Log.i(LOG_TAG, "Network available: ${networkAvailable()}")
     }
 
     fun getMonsterData() {
-        val text = FileHelper.getTextFromAssets(app, "monster_data.json")
-        val moshi = Moshi.Builder().build()
-        val adapter: JsonAdapter<List<Monster>> =
-            moshi.adapter(listType)
-        monsterData.value = adapter.fromJson(text) ?: emptyList()
     }
 
     @Suppress("DEPRECATION")
