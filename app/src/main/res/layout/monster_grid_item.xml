@@ -7,7 +7,8 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        android:background="@drawable/grid_item_background">
 
     <TextView
             android:id="@+id/nameText"
