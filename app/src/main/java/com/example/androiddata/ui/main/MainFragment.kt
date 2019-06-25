@@ -22,12 +22,7 @@ class MainFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         viewModel.monsterData.observe(this, Observer
         {
-            val monsterNames = StringBuilder()
-            for (monster in it) {
-                monsterNames.append(monster.monsterName)
-                    .append("\n")
-            }
-            message.text = monsterNames
+
         })
 
         return inflater.inflate(R.layout.main_fragment, container, false)
