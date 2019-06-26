@@ -59,7 +59,7 @@ class MonsterRepository(val app: Application) {
         val moshi = Moshi.Builder().build()
         val listType = Types.newParameterizedType(List::class.java, Monster::class.java)
         val adapter: JsonAdapter<List<Monster>> = moshi.adapter(listType)
-        val json = adapter.toJson((monsterData))
+        val json = adapter.toJson(monsterData)
         FileHelper.saveTextToFile(app, json)
     }
 }
