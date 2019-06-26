@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -29,6 +30,11 @@ class MainFragment : Fragment(),
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        (requireActivity() as AppCompatActivity).run {
+            supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        }
+
         val view = inflater.inflate(R.layout.main_fragment, container, false)
         recyclerView = view.findViewById(R.id.recyclerView)
         navController = Navigation.findNavController(
