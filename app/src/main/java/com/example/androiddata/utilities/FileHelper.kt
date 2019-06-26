@@ -1,6 +1,8 @@
 package com.example.androiddata.utilities
 
+import android.app.Application
 import android.content.Context
+import java.io.File
 
 class FileHelper {
     companion object {
@@ -18,6 +20,11 @@ class FileHelper {
                     it.readText()
                 }
             }
+        }
+
+        fun saveTextToFile(app: Application, json: String?) {
+            val file = File(app.cacheDir, "monsters.json")
+            file.writeText(json ?: "", Charsets.UTF_8)
         }
     }
 }
