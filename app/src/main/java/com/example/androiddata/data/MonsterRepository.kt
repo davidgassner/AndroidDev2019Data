@@ -1,10 +1,13 @@
 package com.example.androiddata.data
 
+import android.Manifest
 import android.app.Application
 import android.content.Context
+import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.util.Log
 import androidx.annotation.WorkerThread
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.MutableLiveData
 import com.example.androiddata.LOG_TAG
 import com.example.androiddata.WEB_SERVICE_URL
@@ -50,7 +53,7 @@ class MonsterRepository(val app: Application) {
     @Suppress("DEPRECATION")
     private fun networkAvailable(): Boolean {
         val connectivityManager = app.getSystemService(Context.CONNECTIVITY_SERVICE)
-            as ConnectivityManager
+                as ConnectivityManager
         val networkInfo = connectivityManager.activeNetworkInfo
         return networkInfo?.isConnectedOrConnecting ?: false
     }
@@ -62,11 +65,18 @@ class MonsterRepository(val app: Application) {
     }
 
     private fun saveDataToCache(monsterData: List<Monster>) {
-        val moshi = Moshi.Builder().build()
-        val listType = Types.newParameterizedType(List::class.java, Monster::class.java)
-        val adapter: JsonAdapter<List<Monster>> = moshi.adapter(listType)
-        val json = adapter.toJson(monsterData)
-        FileHelper.saveTextToFile(app, json)
+        if (ContextCompat.checkSelfPermission(
+                app,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            )
+            == PackageManager.PERMISSION_GRANTED
+        ) {
+            val moshi = Moshi.Builder().build()
+            val listType = Types.newParameterizedType(List::class.java, Monster::class.java)
+            val adapter: JsonAdapter<List<Monster>> = moshi.adapter(listType)
+            val json = adapter.toJson(monsterData)
+            FileHelper.saveTextToFile(app, json)
+        }
     }
 
     private fun readDataFromCache(): List<Monster> {
