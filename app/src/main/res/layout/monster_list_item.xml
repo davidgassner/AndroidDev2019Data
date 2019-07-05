@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/grid_item_background">
+
+    <ImageView
+            android:id="@+id/monsterImage"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="A monster"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            tools:src="@drawable/monster01_tn"
+            tools:ignore="HardcodedText"/>
+
+    <TextView
+            android:id="@+id/nameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:gravity="start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/monsterImage"
+            app:layout_constraintEnd_toStartOf="@id/ratingBar"
+            tools:text="Mingle"/>
+
+    <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            style="?android:attr/ratingBarStyleSmall"
+            app:layout_constraintTop_toTopOf="@id/nameText"
+            app:layout_constraintBottom_toBottomOf="@id/nameText"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
