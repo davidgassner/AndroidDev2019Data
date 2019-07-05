@@ -2,9 +2,7 @@ package com.example.androiddata.ui.main
 
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -34,6 +32,7 @@ class MainFragment : Fragment(),
         (requireActivity() as AppCompatActivity).run {
             supportActionBar?.setDisplayHomeAsUpEnabled(false)
         }
+        setHasOptionsMenu(true)
 
         val view = inflater.inflate(R.layout.main_fragment, container, false)
         recyclerView = view.findViewById(R.id.recyclerView)
@@ -61,6 +60,23 @@ class MainFragment : Fragment(),
         Log.i(LOG_TAG, "Selected monster: ${monster.monsterName}")
         viewModel.selectedMonster.value = monster
         navController.navigate(R.id.action_nav_detail)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        inflater?.inflate(R.menu.options_main, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.action_view_grid -> {
+
+            }
+            R.id.action_view_list -> {
+
+            }
+        }
+        return true
     }
 
 }
