@@ -7,4 +7,5 @@
     <string name="scariness_rating">Scariness Rating</string>
     <string name="list">List</string>
     <string name="grid">Grid</string>
+    <string name="settings">Settings</string>
 </resources>
