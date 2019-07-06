@@ -74,13 +74,13 @@ class MainFragment : Fragment(),
         navController.navigate(R.id.action_nav_detail)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.options_main, menu)
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.options_main, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
             R.id.action_view_grid -> {
                 PrefsHelper.setItemType(requireContext(), "grid")
                 recyclerView.layoutManager =
@@ -92,6 +92,9 @@ class MainFragment : Fragment(),
                 recyclerView.layoutManager =
                     LinearLayoutManager(requireContext())
                 recyclerView.adapter = adapter
+            }
+            R.id.action_settings -> {
+                navController.navigate(R.id.settingsActivity)
             }
         }
         return true

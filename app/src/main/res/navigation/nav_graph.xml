@@ -29,4 +29,8 @@
                 android:id="@+id/action_nav_main"
                 app:destination="@id/mainFragment"/>
     </fragment>
+    <activity
+            android:id="@+id/settingsActivity"
+            android:name="com.example.androiddata.SettingsActivity"
+            android:label="SettingsActivity"/>
 </navigation>
