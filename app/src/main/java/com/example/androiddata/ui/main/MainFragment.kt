@@ -64,6 +64,9 @@ class MainFragment : Fragment(),
             recyclerView.adapter = adapter
             swipeLayout.isRefreshing = false
         })
+        viewModel.activityTitle.observe(this, Observer {
+            requireActivity().title = it
+        })
 
         return view
     }
@@ -98,6 +101,11 @@ class MainFragment : Fragment(),
             }
         }
         return true
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.updateActivityTitle()
     }
 
 }
